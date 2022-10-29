@@ -58,11 +58,11 @@ User may review images and delay passaging at any point.
 
 ---
 
-# Appendix: Fail-Safe Behavior
+# Appendix: Fail-Safe Behaviour
 
-* What should the behavior be if the user is unresponsive?
+* What should the behaviour be if the user is unresponsive?
   * Probably continue with the passaging?
   * Alert the user that this is what you've done?
-* What should the behavior be if the server is unreachable?
+* What should the behaviour be if the server is unreachable?
   * Probably continue with the passaging?
   * Alert the user that the device is unavailable.
