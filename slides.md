@@ -57,6 +57,12 @@ Keep Trucking On.
 
 ---
 
+# Server Infrastructure - Distributed Monolith
+
+![](./server-infrastructure.excalidraw.png)
+
+---
+
 # ...
 
 ---
@@ -66,7 +72,16 @@ Keep Trucking On.
 
 ---
 
-# Appendix A: Fail-Safe Behaviour
+# Appendix: Assumptions
+
+* Cells move slowly
+  * Low frame rate
+  * Okay to upload every photo to S3.
+* Microscope can autofocus with simple max-sharpness algorithm
+
+---
+
+# Appendix: Fail-Safe Behaviour
 
 * What should the behaviour be if the user is unresponsive?
   * Probably continue with the passaging?
@@ -78,6 +93,6 @@ Keep Trucking On.
 
 ---
 
-# Appendix B: Wardley Map
+# Appendix: Wardley Map
 
 ![](./wardley-map.excalidraw.png)
