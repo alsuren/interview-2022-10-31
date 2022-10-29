@@ -18,6 +18,13 @@
 
 ---
 
+# High Level Architecture
+
+![](./high-level.excalidraw.png)
+
+
+---
+
 # ...
 
 ---
