@@ -23,13 +23,9 @@
 Perform passaging, but only at the right time:
 
 * Wait for a preset delay.
-
 * Take images of flask.
-
 * Ask for user approval:
-
   * Move cells to new flask.
-
   * Wait some more.
 
 ---
