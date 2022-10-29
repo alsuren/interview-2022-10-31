@@ -30,6 +30,18 @@ Perform passaging, but only at the right time:
 
 ---
 
+# Alternative Problem Statement
+
+Perform passaging, when conditions are met:
+
+* Take images of flask periodically.
+* Wait for a condition to be met.
+* Move cells to new flask.
+
+User may review images and delay passaging at any point.
+
+---
+
 # High Level Architecture
 
 ![](./high-level.excalidraw.png)
