@@ -18,19 +18,7 @@
 
 ---
 
-# Problem
-
-Perform passaging, but only at the right time:
-
-* Wait for a preset delay.
-* Take images of flask.
-* Ask for user approval:
-  * Move cells to new flask.
-  * Wait some more.
-
----
-
-# Alternative Problem Statement
+# Problem Statement
 
 Perform passaging, when conditions are met:
 
@@ -39,6 +27,17 @@ Perform passaging, when conditions are met:
 * Move cells to new flask.
 
 User may review images and delay passaging at any point.
+
+---
+
+# Failure Modes
+
+* User is unresponsive:
+  * Continue with the passaging.
+  * Alert the user that this is what you've done.
+* Network Outage:
+  * Continue with the passaging.
+  * Alert the user that the device is unavailable.
 
 ---
 
