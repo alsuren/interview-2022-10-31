@@ -34,16 +34,25 @@ User may review images and delay passaging at any point.
 
 * User is unresponsive:
   * Continue with the passaging.
-  * Alert the user that this is what you've done.
+  * Alert the user.
 * Network Outage:
   * Continue with the passaging.
-  * Alert the user that the device is unavailable.
+  * Alert the user.
+
+Keep Trucking On.
 
 ---
 
 # High Level Architecture
 
 ![](./high-level.excalidraw.png)
+
+
+---
+
+# Passaging Device
+
+![](./passaging-device.excalidraw.png)
 
 
 ---
@@ -57,7 +66,7 @@ User may review images and delay passaging at any point.
 
 ---
 
-# Appendix: Fail-Safe Behaviour
+# Appendix A: Fail-Safe Behaviour
 
 * What should the behaviour be if the user is unresponsive?
   * Probably continue with the passaging?
@@ -65,3 +74,10 @@ User may review images and delay passaging at any point.
 * What should the behaviour be if the server is unreachable?
   * Probably continue with the passaging?
   * Alert the user that the device is unavailable.
+
+
+---
+
+# Appendix B: Wardley Map
+
+![](./wardley-map.excalidraw.png)
