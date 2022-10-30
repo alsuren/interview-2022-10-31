@@ -23,28 +23,28 @@
 
 # Problem Statement
 
-Perform passaging, when conditions are met:
-
 * Take images of flask periodically.
-* Wait for a condition to be met.
+* Wait for conditions to be met.
+* Check cell health.
 * Move cells to new flask.
+* Repeat.
 
-User may review images and delay passaging at any point.
+User may review images and interrupt things.
 
 ---
 
 # Failure Modes
 
 * User is unresponsive:
-  * Continue with the passaging.
+  * Continue the process.
   * Alert the user.
 * Network Outage:
-  * Continue with the passaging.
+  * Continue the process.
   * Alert the user.
 
-???
+--
 
-Keep Trucking On.
+Keep Trucking On. Don't kill the cells.
 
 ---
 
