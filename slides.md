@@ -25,13 +25,13 @@
 
 Automate passaging for cell growth.
 
-* Take images of flask periodically.
+* Take microscope images of cells.
 * Wait for conditions to be met.
-* Check cell health.
 * Move cells to new flask.
+  * Check cell health.
 * Repeat.
 
-User may review images and interrupt things.
+User should review images and may override.
 
 ---
 
@@ -54,8 +54,10 @@ Keep Trucking On. Don't kill the cells.
 
 ???
 
-* Nothing to see here. This is just a map of the landscape.
-* Look into each piece separately.
+* Map of the landscape.
+* Will dig into:
+  * Growth Device
+  * Server Infrastructure.
 
 ---
 
@@ -88,7 +90,6 @@ Keep Trucking On. Don't kill the cells.
 
 ???
 
-* Flash this up
 * Talk about Server Architecture Next
 
 ---
@@ -96,6 +97,18 @@ Keep Trucking On. Don't kill the cells.
 # Server Infrastructure - Distributed Monolith
 
 ![](./server-infrastructure.excalidraw.png)
+
+???
+
+* Shared DB
+* Web Tier + Async Tier
+* Photos uploaded to blob storage like S3.
+* This would probably work
+  * Timescales are slow.
+  * Poll for overrides before acting.
+* I know that they are using MQTT. Why?
+  * Immediate control of device from laptop/tablet?
+  * Efficiency doesn't feel like the driving factor.
 
 ---
 
@@ -107,7 +120,6 @@ Keep Trucking On. Don't kill the cells.
 
 * I know that they are using MQTT. Why?
   * Immediate control of device from laptop/tablet?
-  * Efficiency doesn't feel like the driving factor.
 * External push service - infrastructure.
   * Pubsub topics/channel(s) per device
   * Pubsub topics/channel(s) per user
@@ -126,7 +138,6 @@ Keep Trucking On. Don't kill the cells.
   * Physical topology not as important as logical message flow.
   * Care has to be taken around Access Control:
     * Devices+Laptops should only be able to subscribe to topics from the same org
-    * 
 * Logical message flow can be more direct.
 * Broker handles message fan-out and load balancing.
 * Broker stores messages for clients that are offline if desired.
@@ -134,6 +145,7 @@ Keep Trucking On. Don't kill the cells.
 * Not Shown:
   * Auth Service for bootstrapping Device and Laptop
   * Blob Storage for images.
+  * Distributed tracing infrastructure for debugging.
 
 ---
 
