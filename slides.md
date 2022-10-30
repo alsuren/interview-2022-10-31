@@ -49,6 +49,10 @@ Keep Trucking On.
 
 ![](./high-level.excalidraw.png)
 
+???
+
+* Nothing to see here. This is just a map of the landscape.
+* Look into each piece separately.
 
 ---
 
@@ -56,6 +60,33 @@ Keep Trucking On.
 
 ![](./growth-device.excalidraw.png)
 
+???
+
+* Needs to be autonomous
+  * Microscope Focus logic lives here
+  * Confluence Estimation logic lives here
+  * Cell liveness estimation logic lives here
+  * User-provided strategy logic lives here
+* Motors control everything: pumps, flask selection, (centrifuges?)
+  * Motor control wants to be on its own RTOS
+  * Talked to Henry about protocol if language is same on both sides.
+  * Otherwise, define in protobuf/similar, and bind into both languages.
+  * Add checksums, and fuzz round-trip-ability of messagses in CI.
+* Pick commodity-off-the-shelf microscopes
+  * Focussing is the only thing that wants to be real-time.
+    * Simple maximum-sharpness algorithm would be enough for this.
+    * Could be built into the microscope?
+
+---
+
+# High Level Architecture
+
+![](./high-level.excalidraw.png)
+
+???
+
+* Flash this up
+* Talk about Server Architecture
 
 ---
 
@@ -73,21 +104,9 @@ Keep Trucking On.
 
 * I know that they are using MQTT. Why?
   * Immediate control of device from laptop/tablet?
-    * Aside: Do you even allow laptops in labs? Feels like a contamination magnet.
   * Efficiency doesn't feel like the driving factor.
-* 
-
----
-
-# Device Enrolment
-
-* TODO
-
-???
-
-* Provide wifi creds via hotspot dance || require wired connection
-  * Okay to require wired connection for large installs
-* Device doesn't seem to have a screen
+* External push service - infrastructure.
+  * Can hang email/sms off the push service.
 
 
 ---
@@ -142,6 +161,26 @@ TODO: add server racks - should not be bespoke
 
 ---
 
-# Appendix: UI
+# Appendix: Cell Review UI
 
 ![](./ui.png)
+
+---
+
+# Appendix: Dashboard UI
+
+![](./dashboard.png)
+
+---
+
+# Device Enrolment
+
+* TODO
+
+???
+
+* Provide wifi creds via hotspot dance || require wired connection
+  * Better to require wired connection for large installs
+* Device doesn't seem to have a screen:
+  * Indicator LEDs for "please feed me"?
+  * ID printed on the front, or QR code somewhere?
