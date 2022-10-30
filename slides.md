@@ -116,12 +116,11 @@ Keep Trucking On. Don't kill the cells.
 
 ???
 
-* I know that they are using MQTT. Why?
-  * Immediate control of device from laptop/tablet?
-* External push service - infrastructure.
+* Responsive control from laptop.
+* External push service.
   * Pubsub topics/channel(s) per device
   * Pubsub topics/channel(s) per user
-  * Can often hang email/sms off the push service.
+  * Email/SMS can hang off the push service too.
 
 ---
 
@@ -131,15 +130,17 @@ Keep Trucking On. Don't kill the cells.
 
 ???
 
-* Dashed lines depict that everything is connected to the message broker
-  * Broker = MQTT / NATS / ...
-  * Physical topology not as important as logical message flow.
-  * Re: Access Control:
-      * Devices+Laptops should only be able to subscribe to topics from the same org
+* Rip everything out and use a message broker.
 * Logical message flow is more direct.
-* Broker handles fan-out / load-balancing.
-* Broker stores for offline clients if desired.
-* Brokers have message size limits, so GraphQL still needed.
+  * Messages routed "directly" from Device to Laptop.
+  * Some topics are durable.
+* Everything is connected to the message broker (dashes)
+* Broker
+  * MQTT / NATS / ...
+  * Handles fan-out / load-balancing.
+  * Handles access control (needs help).
+  * Stores messages for offline clients if desired.
+  * Brokers have message size limits, so GraphQL still needed.
 * Not Shown:
   * Auth Service for bootstrapping Device and Laptop
   * Blob Storage for images.
