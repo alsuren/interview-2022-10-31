@@ -134,14 +134,14 @@ Keep Trucking On. Don't kill the cells.
 ???
 
 * Dashed lines depict that everything is connected to the message broker
-  * Broker could be MQTT or NATS or similar
+  * Broker = MQTT / NATS / ...
   * Physical topology not as important as logical message flow.
-  * Care has to be taken around Access Control:
-    * Devices+Laptops should only be able to subscribe to topics from the same org
-* Logical message flow can be more direct.
-* Broker handles message fan-out and load balancing.
-* Broker stores messages for clients that are offline if desired.
-* Brokers typically have message size limits, so GraphQL is still a good idea.
+  * Re: Access Control:
+      * Devices+Laptops should only be able to subscribe to topics from the same org
+* Logical message flow is more direct.
+* Broker handles fan-out / load-balancing.
+* Broker stores for offline clients if desired.
+* Brokers have message size limits, so GraphQL still needed.
 * Not Shown:
   * Auth Service for bootstrapping Device and Laptop
   * Blob Storage for images.
