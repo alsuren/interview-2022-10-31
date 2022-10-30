@@ -13,7 +13,7 @@
 # Outline
 
 * Problem Statement
-* Failure Modes
+* What Could Go Wrong?
 * High Level Architecture
   * Growth Device
   * Server Infrastructure
@@ -35,7 +35,7 @@ User should review images and may override.
 
 ---
 
-# Failure Modes
+# What Could Go Wrong?
 
 * User is unresponsive:
   * Continue the process.
