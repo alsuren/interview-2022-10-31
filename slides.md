@@ -39,6 +39,8 @@ User may review images and delay passaging at any point.
   * Continue with the passaging.
   * Alert the user.
 
+???
+
 Keep Trucking On.
 
 ---
@@ -50,9 +52,9 @@ Keep Trucking On.
 
 ---
 
-# Passaging Device
+# Growth Device
 
-![](./passaging-device.excalidraw.png)
+![](./growth-device.excalidraw.png)
 
 
 ---
@@ -60,6 +62,33 @@ Keep Trucking On.
 # Server Infrastructure - Distributed Monolith
 
 ![](./server-infrastructure.excalidraw.png)
+
+---
+
+# Server Infrastructure - Push Based
+
+* TODO
+
+???
+
+* I know that they are using MQTT. Why?
+  * Immediate control of device from laptop/tablet?
+    * Aside: Do you even allow laptops in labs? Feels like a contamination magnet.
+  * Efficiency doesn't feel like the driving factor.
+* 
+
+---
+
+# Device Enrolment
+
+* TODO
+
+???
+
+* Provide wifi creds via hotspot dance || require wired connection
+  * Okay to require wired connection for large installs
+* Device doesn't seem to have a screen
+
 
 ---
 
@@ -78,6 +107,10 @@ Keep Trucking On.
   * Low frame rate
   * Okay to upload every photo to S3.
 * Microscope can autofocus with simple max-sharpness algorithm
+* Linux board is pretty powerful
+  * Can handle HTTP+SSL just fine
+* Fleet size is small-ish (risky)
+  * HTTP polling is just fine
 
 ---
 
@@ -96,3 +129,19 @@ Keep Trucking On.
 # Appendix: Wardley Map
 
 ![](./wardley-map.excalidraw.png)
+
+???
+
+TODO: add server racks - should not be bespoke
+
+---
+
+# Appendix: Personal Notes
+
+* [Video: Passaging Cells: Cell Culture Basics](https://www.youtube.com/watch?v=CMRKKl9XSDU)
+
+---
+
+# Appendix: UI
+
+![](./ui.png)

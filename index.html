@@ -52,7 +52,11 @@
         window.slideshow = remark.create({
           navigation: {
             scroll: false,
-          }
+          },
+          slideNumberFormat: function (current, total) {
+            // TODO: put a fixed + '/ #' when I know where the Questions slide lives
+            return current;
+          },
         })
       })
     })
