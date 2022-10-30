@@ -132,15 +132,17 @@ Keep Trucking On. Don't kill the cells.
 
 * Rip everything out and use a message broker.
 * Logical message flow is more direct.
-  * Messages routed "directly" from Device to Laptop.
+  * Messages flow "directly" from Device to Laptop.
   * Some topics are durable.
+  * Others use Request/Response abstraction.
 * Everything is connected to the message broker (dashes)
 * Broker
   * MQTT / NATS / ...
   * Handles fan-out / load-balancing.
   * Handles access control (needs help).
   * Stores messages for offline clients if desired.
-  * Brokers have message size limits, so GraphQL still needed.
+  * Message size limits, so GraphQL still needed
+      * Not sure about the state of graphql subscriptions
 * Not Shown:
   * Auth Service for bootstrapping Device and Laptop
   * Blob Storage for images.
