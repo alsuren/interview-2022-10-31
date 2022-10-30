@@ -79,14 +79,14 @@ Keep Trucking On.
 
 ---
 
-# High Level Architecture
+# High Level Architecture Recap
 
 ![](./high-level.excalidraw.png)
 
 ???
 
 * Flash this up
-* Talk about Server Architecture
+* Talk about Server Architecture Next
 
 ---
 
@@ -98,7 +98,7 @@ Keep Trucking On.
 
 # Server Infrastructure - Push Based
 
-* TODO
+![](./server-push.excalidraw.png)
 
 ???
 
@@ -106,8 +106,30 @@ Keep Trucking On.
   * Immediate control of device from laptop/tablet?
   * Efficiency doesn't feel like the driving factor.
 * External push service - infrastructure.
-  * Can hang email/sms off the push service.
+  * Pubsub topics/channel(s) per device
+  * Pubsub topics/channel(s) per user
+  * Can often hang email/sms off the push service.
 
+---
+
+# Server Infrastructure - Message Broker
+
+![](./server-mqtt-nats.excalidraw.png)
+
+
+* Dashed lines depict that everything is connected to the message broker
+  * Broker could be MQTT or NATS or similar
+  * Physical topology not as important as logical message flow.
+  * Care has to be taken around Access Control:
+    * Devices+Laptops should only be able to subscribe to topics from the same org
+    * 
+* Logical message flow can be more direct.
+* Broker handles message fan-out and load balancing.
+* Broker stores messages for clients that are offline if desired.
+* Brokers typically have message size limits, so GraphQL is still a good idea.
+* Not Shown:
+  * Auth Service for bootstrapping Device and Laptop
+  * Blob Storage for images.
 
 ---
 
