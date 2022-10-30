@@ -153,6 +153,12 @@ Keep Trucking On. Don't kill the cells.
 
 ---
 
+# Appendix: Wardley Map
+
+![](./wardley-map.excalidraw.png)
+
+---
+
 # Appendix: Assumptions
 
 * Cells move slowly
@@ -175,16 +181,6 @@ Keep Trucking On. Don't kill the cells.
   * Probably continue with the passaging?
   * Alert the user that the device is unavailable.
 
-
----
-
-# Appendix: Wardley Map
-
-![](./wardley-map.excalidraw.png)
-
-???
-
-TODO: add server racks - should not be bespoke
 
 ---
 
