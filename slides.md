@@ -37,12 +37,12 @@ User should review images and may override.
 
 # What Could Go Wrong?
 
-* User is unresponsive:
-  * Continue the process.
-  * Alert the user.
-* Network Outage:
-  * Continue the process.
-  * Alert the user.
+What should we do?
+
+* User is unresponsive?
+  * Continue the process. Alert the user.
+* Network Outage?
+  * Continue the process. Alert the user.
 
 Keep Trucking On. Don't kill the cells.
 
