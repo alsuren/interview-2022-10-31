@@ -119,6 +119,7 @@ Keep Trucking On.
 
 ![](./server-mqtt-nats.excalidraw.png)
 
+???
 
 * Dashed lines depict that everything is connected to the message broker
   * Broker could be MQTT or NATS or similar
@@ -136,8 +137,7 @@ Keep Trucking On.
 
 ---
 
-# Questions?
-
+<h1 style="position: relative; top: 40%; text-align: center;">Questions?</h1>
 
 ---
 
