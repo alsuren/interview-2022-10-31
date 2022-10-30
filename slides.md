@@ -23,6 +23,8 @@
 
 # Problem Statement
 
+Automate passaging for cell growth.
+
 * Take images of flask periodically.
 * Wait for conditions to be met.
 * Check cell health.
@@ -41,8 +43,6 @@ User may review images and interrupt things.
 * Network Outage:
   * Continue the process.
   * Alert the user.
-
---
 
 Keep Trucking On. Don't kill the cells.
 
@@ -66,15 +66,15 @@ Keep Trucking On. Don't kill the cells.
 ???
 
 * Needs to be autonomous
-  * Microscope Focus logic lives here
-  * Confluence Estimation logic lives here
-  * Cell liveness estimation logic lives here
-  * User-provided strategy logic lives here
+  * Microscope Focus
+  * Confluence Estimation
+  * Cell liveness estimation
+  * User-provided strategy
 * Motors control everything: pumps, flask selection, (centrifuges?)
   * Motor control wants to be on its own RTOS
-  * Talked to Henry about protocol if language is same on both sides.
-  * Otherwise, define in protobuf/similar, and bind into both languages.
-  * Add checksums, and fuzz round-trip-ability of messagses in CI.
+  * Talked to Henry about protocol.
+  * Otherwise, protobuf/..., bind into both languages.
+  * Add checksums, and fuzz in CI.
 * Pick commodity-off-the-shelf microscopes
   * Focussing is the only thing that wants to be real-time.
     * Simple maximum-sharpness algorithm would be enough for this.
