@@ -84,25 +84,19 @@ Keep Trucking On. Don't kill the cells.
 
 ---
 
-# High Level Architecture Recap
-
-![](./high-level.excalidraw.png)
-
-???
-
-* Talk about Server Architecture Next
-
----
-
-# Server Infrastructure - Distributed Monolith
+# Server Infrastructure A - Distributed Monolith
 
 ![](./server-infrastructure.excalidraw.png)
 
 ???
 
-* Shared DB
-* Web Tier + Async Tier
-* Photos uploaded to blob storage like S3.
+* Growth Device
+  * Photos uploaded to blob storage like S3.
+  * Status updates to Device endpoints
+  * Poll for user overrides
+* Distributed Monolith
+  * Shared DB
+  * Web Tier + Async Tier
 * This would probably work
   * Timescales are slow.
   * Poll for overrides before acting.
@@ -112,7 +106,7 @@ Keep Trucking On. Don't kill the cells.
 
 ---
 
-# Server Infrastructure - Push Based
+# Server Infrastructure B - Push Based
 
 ![](./server-push.excalidraw.png)
 
@@ -127,7 +121,7 @@ Keep Trucking On. Don't kill the cells.
 
 ---
 
-# Server Infrastructure - Message Broker
+# Server Infrastructure C - Message Broker
 
 ![](./server-mqtt-nats.excalidraw.png)
 
