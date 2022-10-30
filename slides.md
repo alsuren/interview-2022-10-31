@@ -12,9 +12,12 @@
 
 # Outline
 
-- ...
-
-- Questions
+* Problem Statement
+* Failure Modes
+* High Level Architecture
+  * Growth Device
+  * Server Infrastructure
+* Questions
 
 ---
 
@@ -130,10 +133,6 @@ Keep Trucking On.
 * Not Shown:
   * Auth Service for bootstrapping Device and Laptop
   * Blob Storage for images.
-
----
-
-# ...
 
 ---
 
