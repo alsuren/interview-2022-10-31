@@ -94,15 +94,19 @@ Keep Trucking On. Don't kill the cells.
   * Photos uploaded to blob storage like S3.
   * Status updates to Device endpoints
   * Poll for user overrides
+* User Laptop
+  * Probably GraphQL for everything
+  * Email/SMS notifications might go via a queue.
 * Distributed Monolith
   * Shared DB
   * Web Tier + Async Tier
-* This would probably work
-  * Timescales are slow.
-  * Poll for overrides before acting.
-* I know that they are using MQTT. Why?
-  * Immediate control of device from laptop/tablet?
-  * Efficiency doesn't feel like the driving factor.
+* Assessment
+  * This would probably work
+      * Timescales are slow enough.
+      * Device Polls for overrides before acting.
+  * Henry says you are using MQTT. Why?
+      * Immediate control of device from laptop/tablet?
+      * (Efficiency doesn't feel like the driving factor)
 
 ---
 
