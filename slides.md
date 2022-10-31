@@ -35,6 +35,18 @@ User can review images and override.
 
 ---
 
+# Appendix: Cell Review UI
+
+![](./ui.png)
+
+---
+
+# Appendix: Dashboard UI
+
+![](./dashboard.png)
+
+---
+
 # What Could Go Wrong?
 
 What should we do?
@@ -194,18 +206,6 @@ Keep Trucking On. Don't kill the cells.
 # Appendix: Personal Notes
 
 * [Video: Passaging Cells: Cell Culture Basics](https://www.youtube.com/watch?v=CMRKKl9XSDU)
-
----
-
-# Appendix: Cell Review UI
-
-![](./ui.png)
-
----
-
-# Appendix: Dashboard UI
-
-![](./dashboard.png)
 
 ---
 
