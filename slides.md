@@ -31,7 +31,7 @@ Automate passaging for cell growth.
   * Check cell health.
 * Repeat.
 
-User should review images and may override.
+User can review images and override.
 
 ---
 
@@ -43,6 +43,8 @@ What should we do?
   * Continue the process. Alert the user.
 * Network Outage?
   * Continue the process. Alert the user.
+* Hardware Fault?
+  * <s>Continue the process.</s> Alert the user.
 
 Keep Trucking On. Don't kill the cells.
 
@@ -151,6 +153,22 @@ Keep Trucking On. Don't kill the cells.
 ---
 
 <h1 style="position: relative; top: 40%; text-align: center;">Questions?</h1>
+---
+
+# Appendix: Things Not Covered
+
+* Auth Service for Device + Laptop.
+* Device Provisioning Flow.
+* Device Update Infrastructure.
+* Distributed Tracing infrastructure.
+
+???
+
+* Make JWT signed for $topic-prefix/#
+* oauth URL + display short auth code dance
+* openembedded(?) || silverblue + containers
+* Opentelemetry (correlation ids in mq headers)
+
 
 ---
 
@@ -170,18 +188,6 @@ Keep Trucking On. Don't kill the cells.
   * Can handle HTTP+SSL just fine
 * Fleet size is small-ish (risky)
   * HTTP polling is just fine
-
----
-
-# Appendix: Fail-Safe Behaviour
-
-* What should the behaviour be if the user is unresponsive?
-  * Probably continue with the passaging?
-  * Alert the user that this is what you've done?
-* What should the behaviour be if the server is unreachable?
-  * Probably continue with the passaging?
-  * Alert the user that the device is unavailable.
-
 
 ---
 
